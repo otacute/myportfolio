@@ -1,0 +1,10 @@
+---
+title: "hw1"
+jupyter: python3
+---
+
+About this site
+
+```{python}
+1 + 1
+```
