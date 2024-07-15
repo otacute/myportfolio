@@ -1,0 +1,148 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"HomeWork(20240715)\"\n",
+        "jupyter: python3\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "### 1. p84 혼자서 해보기\n",
+        "\n",
+        "Q1. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.\n"
+      ],
+      "id": "f3e34105"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "!pip install pandas\n",
+        "import pandas as pd\n",
+        "df = pd.DataFrame({'제품' : ['사과','딸기','수박'],\n",
+        "      '가격' : [1800, 1500, 3000],\n",
+        "      '판매량' : [24,38,13]})\n",
+        "df"
+      ],
+      "id": "8a9ab038",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Q2. 앞에서 만든 데이터 프레임을 이용해 과일의 가격 평균과 판매량 평균을 구해 보세요.\n"
+      ],
+      "id": "53cffcc4"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df['가격'].mean()\n",
+        "df['판매량'].mean()"
+      ],
+      "id": "ea424392",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### 2. 115p 혼자서해보기\n",
+        "**mpg 데이터를 이용해 분석 문제를 해결해 보세요.**\n",
+        "*mpg 데이터의 변수명은 긴 단어를 짧게 줄인 축약어로 되어 있습니다. city는 도시 연비, hwy는 고속도로 연비를 의미합니다. 변수명을 이해하기 쉬운 단어로 바꾸려고 합니다.*\n",
+        "\n",
+        "Q1. mpg 데이터를 불러와 복사본을 만드세요.\n"
+      ],
+      "id": "63162dcc"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "mpg = pd.read_csv('data/mpg.csv')\n",
+        "mpg_copy = mpg.copy()\n",
+        "mpg_copy"
+      ],
+      "id": "4459bf68",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Q2. 복사본 데이터를 이용해 cty는 city로, hwy는 highway로 수정합니다.\n"
+      ],
+      "id": "b2597b11"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "mpg_copy.rename(columns = {'cty':'city', 'hwy':'highway'})"
+      ],
+      "id": "70d259e4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Q3. 데이터 일부를 출력해 변수명이 바뀌었는지 확인해보세요. 다음과 같은 결과물이 출력되어야 합니다.\n"
+      ],
+      "id": "62428c30"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "mpg_copy"
+      ],
+      "id": "174cccc8",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### 3.p130 분석도전\n",
+        "*midwest.csv는 미국 동북중부 437개 지역의 인구 통계 정보를 담고 있습니다. midwest.csv를 이용해 데이터 분석 문제를 해결해 보세요*\n",
+        "\n",
+        "Q1. midwest.csv를 불러와 데이터의 특징을 파악하세요\n"
+      ],
+      "id": "dc81df02"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import pandas as pd\n",
+        "df2 = pd.read"
+      ],
+      "id": "8db26682",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\USER\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
