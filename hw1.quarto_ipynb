@@ -10,26 +10,33 @@
         "---\n",
         "\n",
         "\n",
-        "\n",
-        "\n",
         "### 1. p84 혼자서 해보기\n",
         "\n",
         "Q1. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.\n"
       ],
-      "id": "f3e34105"
+      "id": "c25e6098"
     },
     {
       "cell_type": "code",
       "metadata": {},
       "source": [
-        "!pip install pandas\n",
+        "! pip install pandas"
+      ],
+      "id": "ea66a982",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
         "import pandas as pd\n",
         "df = pd.DataFrame({'제품' : ['사과','딸기','수박'],\n",
         "      '가격' : [1800, 1500, 3000],\n",
         "      '판매량' : [24,38,13]})\n",
         "df"
       ],
-      "id": "8a9ab038",
+      "id": "37ff77d4",
       "execution_count": null,
       "outputs": []
     },
@@ -39,7 +46,7 @@
       "source": [
         "Q2. 앞에서 만든 데이터 프레임을 이용해 과일의 가격 평균과 판매량 평균을 구해 보세요.\n"
       ],
-      "id": "53cffcc4"
+      "id": "c1e6de74"
     },
     {
       "cell_type": "code",
@@ -48,7 +55,7 @@
         "df['가격'].mean()\n",
         "df['판매량'].mean()"
       ],
-      "id": "ea424392",
+      "id": "cde8927f",
       "execution_count": null,
       "outputs": []
     },
@@ -57,12 +64,12 @@
       "metadata": {},
       "source": [
         "### 2. 115p 혼자서해보기\n",
-        "**mpg 데이터를 이용해 분석 문제를 해결해 보세요.**\n",
-        "*mpg 데이터의 변수명은 긴 단어를 짧게 줄인 축약어로 되어 있습니다. city는 도시 연비, hwy는 고속도로 연비를 의미합니다. 변수명을 이해하기 쉬운 단어로 바꾸려고 합니다.*\n",
+        "\n",
+        "**mpg 데이터를 이용해 분석 문제를 해결해 보세요.** *mpg 데이터의 변수명은 긴 단어를 짧게 줄인 축약어로 되어 있습니다. city는 도시 연비, hwy는 고속도로 연비를 의미합니다. 변수명을 이해하기 쉬운 단어로 바꾸려고 합니다.*\n",
         "\n",
         "Q1. mpg 데이터를 불러와 복사본을 만드세요.\n"
       ],
-      "id": "63162dcc"
+      "id": "570b2871"
     },
     {
       "cell_type": "code",
@@ -72,7 +79,7 @@
         "mpg_copy = mpg.copy()\n",
         "mpg_copy"
       ],
-      "id": "4459bf68",
+      "id": "dc70a185",
       "execution_count": null,
       "outputs": []
     },
@@ -82,15 +89,15 @@
       "source": [
         "Q2. 복사본 데이터를 이용해 cty는 city로, hwy는 highway로 수정합니다.\n"
       ],
-      "id": "b2597b11"
+      "id": "57e0fa37"
     },
     {
       "cell_type": "code",
       "metadata": {},
       "source": [
-        "mpg_copy.rename(columns = {'cty':'city', 'hwy':'highway'})"
+        "mpg_copy = mpg_copy.rename(columns = {'cty':'city', 'hwy':'highway'})"
       ],
-      "id": "70d259e4",
+      "id": "85761121",
       "execution_count": null,
       "outputs": []
     },
@@ -100,7 +107,7 @@
       "source": [
         "Q3. 데이터 일부를 출력해 변수명이 바뀌었는지 확인해보세요. 다음과 같은 결과물이 출력되어야 합니다.\n"
       ],
-      "id": "62428c30"
+      "id": "6c5b14f6"
     },
     {
       "cell_type": "code",
@@ -108,7 +115,7 @@
       "source": [
         "mpg_copy"
       ],
-      "id": "174cccc8",
+      "id": "bebb9fcf",
       "execution_count": null,
       "outputs": []
     },
@@ -117,20 +124,186 @@
       "metadata": {},
       "source": [
         "### 3.p130 분석도전\n",
+        "\n",
         "*midwest.csv는 미국 동북중부 437개 지역의 인구 통계 정보를 담고 있습니다. midwest.csv를 이용해 데이터 분석 문제를 해결해 보세요*\n",
         "\n",
-        "Q1. midwest.csv를 불러와 데이터의 특징을 파악하세요\n"
+        "Q1. midwest.csv를 불러와 데이터의 특징을 파악하세요"
       ],
-      "id": "dc81df02"
+      "id": "494cbf3c"
     },
     {
       "cell_type": "code",
       "metadata": {},
       "source": [
         "import pandas as pd\n",
-        "df2 = pd.read"
+        "df2 = pd.read_csv('data/midwest.csv')\n",
+        "df2"
       ],
-      "id": "8db26682",
+      "id": "39ba002f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df2.head()"
+      ],
+      "id": "393d6165",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df2.tail()"
+      ],
+      "id": "bdda6821",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df2.info()"
+      ],
+      "id": "e595eccc",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df2.describe()"
+      ],
+      "id": "2307bc87",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df2.shape"
+      ],
+      "id": "b4bd841c",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Q2. poptotal변수를 total로 popasian변수를 asian으로 수정하세요"
+      ],
+      "id": "3aa6d6a6"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df2 = df2.rename(columns={'poptotal':'total', 'popasian':'asian'})"
+      ],
+      "id": "8b385d55",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df2.nunique()"
+      ],
+      "id": "89cffa25",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Q3. total, asian 변수를 이용해 전체인구대비 아시아 인구 백분율 파생변수를 추가하고 히스토그램을 만들어 보세요"
+      ],
+      "id": "7b0e3f8c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df2['percent'] = (df2['asian'] / df2['total']) * 100\n",
+        "df2"
+      ],
+      "id": "ebcac2bb",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "df2['percent'].plot.hist()\n",
+        "plt.show()"
+      ],
+      "id": "6e3d25f0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# 아시아 인구 백분율 전체 평균\n",
+        "df2['percent'].mean()"
+      ],
+      "id": "43d7d5a6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# 아시아 인구 백분율 전체 평균\n",
+        "import numpy as np\n",
+        "df2['대소비교'] = np.where(df2['percent']>df2['percent'].mean(), 'large', 'small')\n",
+        "df2"
+      ],
+      "id": "2d94c3eb",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Q5. large와 small에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해보세요"
+      ],
+      "id": "3bc7becc"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "count = df2['대소비교'].value_counts()"
+      ],
+      "id": "49a07f7d",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "count.plot.bar(rot=0)\n",
+        "plt.show()\n",
+        "plt.clf()"
+      ],
+      "id": "b52ef59c",
       "execution_count": null,
       "outputs": []
     }
