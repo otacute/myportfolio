@@ -5,11 +5,25 @@
       "metadata": {},
       "source": [
         "---\n",
-        "title: \"HomeWork(20240715)\"\n",
+        "title: \"HW1\"\n",
         "jupyter: python3\n",
         "---"
       ],
-      "id": "d7d46289"
+      "id": "3248c103"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import pandas as pd\n",
+        "df = pd.DataFrame({'제품' : ['사과','딸기','수박'],\n",
+        "      '가격' : [1800, 1500, 3000],\n",
+        "      '판매량' : [24,38,13]})\n",
+        "df"
+      ],
+      "id": "1a4cf78e",
+      "execution_count": null,
+      "outputs": []
     }
   ],
   "metadata": {

@@ -1,15 +1,19 @@
 ---
 title: "testwebsite"
-jupyter: python3
+toc: false
+about:
+    id: hero-heading
+    template: jolla
+    image: aaa.jpg
+    links:
+        - icon: github
+          text: github
+          href: https://otacute.github.io/myportfolio/
 ---
 
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{python}
-1 + 1
-```
 
 ## 홈페이지 첫 화면입니다!
 
