@@ -1,5 +1,8 @@
 ---
-title: "HomeWork(20240715)"
+title: "Welcome To My Blog"
+author: "Tristan O'Malley"
+date: "2024-07-12"
+categories: [news]
 jupyter: python3
 ---
 

@@ -8,6 +8,11 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: about.qmd
+        text: About
+      - href: blog.qmd
+        text: Blog
+        
       - about.qmd
       - hw1.qmd
 
