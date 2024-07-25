@@ -14,7 +14,7 @@ jupyter: python3
 
 $$
 f(x ; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2}
-$$ \*\*\* $\sigma$는 평균, $\sigma$는 표준편차 \*\*\*
+$$ \*\*\* $\mu$는 평균, $\sigma$는 표준편차 \*\*\*
 
 ```{python}
 import math

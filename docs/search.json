@@ -81,14 +81,14 @@
     "href": "posts/hw3/normal_distribution_example.html",
     "title": "Homework3",
     "section": "",
-    "text": "(from scipy.stat import norm 사용금지)\n\n\n\\[\nf(x ; \\mu, \\sigma) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2} \\left(\\frac{x - \\mu}{\\sigma}\\right)^2}\n\\] *** \\(\\sigma\\)는 평균, \\(\\sigma\\)는 표준편차 ***\n\nimport math\ndef P(x, mu, sigma):\n    return (1 / (sigma * math.sqrt(2*math.pi))) * math.pow(math.e, (-1/2) * ((x - mu)/sigma) ** 2)\n\n# 99.7% 신뢰구간 mu - 3 sigma, mu + 3 sigma\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nmu = 3\nsigma = 2\n\nx = np.linspace(mu - 3*sigma, mu + 3*sigma, 10000)\n\nplt.plot(x, [P(x, mu, sigma) for x in x])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "(from scipy.stat import norm 사용금지)\n\n\n\\[\nf(x ; \\mu, \\sigma) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2} \\left(\\frac{x - \\mu}{\\sigma}\\right)^2}\n\\] *** \\(\\mu\\)는 평균, \\(\\sigma\\)는 표준편차 ***\n\nimport math\ndef P(x, mu, sigma):\n    return (1 / (sigma * math.sqrt(2*math.pi))) * math.pow(math.e, (-1/2) * ((x - mu)/sigma) ** 2)\n\n# 99.7% 신뢰구간 mu - 3 sigma, mu + 3 sigma\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nmu = 3\nsigma = 2\n\nx = np.linspace(mu - 3*sigma, mu + 3*sigma, 10000)\n\nplt.plot(x, [P(x, mu, sigma) for x in x])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   },
   {
     "objectID": "posts/hw3/normal_distribution_example.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2-의-pdf를-그릴-것.",
     "href": "posts/hw3/normal_distribution_example.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2-의-pdf를-그릴-것.",
     "title": "Homework3",
     "section": "",
-    "text": "(from scipy.stat import norm 사용금지)\n\n\n\\[\nf(x ; \\mu, \\sigma) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2} \\left(\\frac{x - \\mu}{\\sigma}\\right)^2}\n\\] *** \\(\\sigma\\)는 평균, \\(\\sigma\\)는 표준편차 ***\n\nimport math\ndef P(x, mu, sigma):\n    return (1 / (sigma * math.sqrt(2*math.pi))) * math.pow(math.e, (-1/2) * ((x - mu)/sigma) ** 2)\n\n# 99.7% 신뢰구간 mu - 3 sigma, mu + 3 sigma\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nmu = 3\nsigma = 2\n\nx = np.linspace(mu - 3*sigma, mu + 3*sigma, 10000)\n\nplt.plot(x, [P(x, mu, sigma) for x in x])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "(from scipy.stat import norm 사용금지)\n\n\n\\[\nf(x ; \\mu, \\sigma) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2} \\left(\\frac{x - \\mu}{\\sigma}\\right)^2}\n\\] *** \\(\\mu\\)는 평균, \\(\\sigma\\)는 표준편차 ***\n\nimport math\ndef P(x, mu, sigma):\n    return (1 / (sigma * math.sqrt(2*math.pi))) * math.pow(math.e, (-1/2) * ((x - mu)/sigma) ** 2)\n\n# 99.7% 신뢰구간 mu - 3 sigma, mu + 3 sigma\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nmu = 3\nsigma = 2\n\nx = np.linspace(mu - 3*sigma, mu + 3*sigma, 10000)\n\nplt.plot(x, [P(x, mu, sigma) for x in x])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   },
   {
     "objectID": "posts/hw3/normal_distribution_example.html#파이썬-scipy-패키지-사용해서-다음과-같은-확률을-구하시오.",

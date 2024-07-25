@@ -242,8 +242,8 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="정규분포의-확률-밀도-함수probability-density-function"><strong><em>정규분포의 확률 밀도 함수(Probability Density Function)</em></strong></h3>
 <p><span class="math display">\[
 f(x ; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2}
-\]</span> *** <span class="math inline">\(\sigma\)</span>는 평균, <span class="math inline">\(\sigma\)</span>는 표준편차 ***</p>
-<div id="42e34465" class="cell" data-execution_count="1">
+\]</span> *** <span class="math inline">\(\mu\)</span>는 평균, <span class="math inline">\(\sigma\)</span>는 표준편차 ***</p>
+<div id="29ecc8cc" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> P(x, mu, sigma):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">1</span> <span class="op">/</span> (sigma <span class="op">*</span> math.sqrt(<span class="dv">2</span><span class="op">*</span>math.pi))) <span class="op">*</span> math.<span class="bu">pow</span>(math.e, (<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">2</span>) <span class="op">*</span> ((x <span class="op">-</span> mu)<span class="op">/</span>sigma) <span class="op">**</span> <span class="dv">2</span>)</span>
@@ -280,7 +280,7 @@ f(x ; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x 
 </section>
 <section id="px-3" class="level3">
 <h3 class="anchored" data-anchor-id="px-3">1) P(X &lt; 3)</h3>
-<div id="0607d12e" class="cell" data-execution_count="2">
+<div id="d1e4e92a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">3</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -290,7 +290,7 @@ f(x ; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x 
 </section>
 <section id="p2-x-5" class="level3">
 <h3 class="anchored" data-anchor-id="p2-x-5">2) P(2 &lt; X &lt; 5)</h3>
-<div id="75db34ed" class="cell" data-execution_count="3">
+<div id="b43d70f7" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">5</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>) <span class="op">-</span> norm.cdf(<span class="dv">2</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -300,7 +300,7 @@ f(x ; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x 
 </section>
 <section id="px-3-or-x-7" class="level3">
 <h3 class="anchored" data-anchor-id="px-3-or-x-7">3) P(X &lt; 3 or X &gt; 7)</h3>
-<div id="9307986d" class="cell" data-execution_count="4">
+<div id="3f3435ff" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">3</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>) <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> norm.cdf(<span class="dv">7</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -313,7 +313,7 @@ f(x ; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x 
 </section>
 <section id="x-n30-22" class="level3">
 <h3 class="anchored" data-anchor-id="x-n30-22"><strong><em>X ~ N(30, 2^2)</em></strong></h3>
-<div id="fb0a7074" class="cell" data-execution_count="5">
+<div id="08173b17" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>norm.ppf(<span class="fl">0.95</span>, loc<span class="op">=</span><span class="dv">30</span>, scale<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
