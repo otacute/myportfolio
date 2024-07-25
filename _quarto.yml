@@ -13,8 +13,6 @@ website:
       - href: blog.qmd
         text: Blog
         
-      - about.qmd
-      - hw1.qmd
 
 format:
   html:

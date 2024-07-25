@@ -1,8 +1,8 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+title: "HomeWork1"
+author: "hg.park"
 date: "2024-07-12"
-categories: [news]
+categories: [HOMEWORK]
 jupyter: python3
 ---
 
