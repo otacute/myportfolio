@@ -1,8 +1,8 @@
 ---
-title: "HomeWork2"
+title: "Homework2"
 author: "hg.park"
 date: "2024-07-22"
-categories: [HomeWork]
+categories: [Homework]
 jupyter: python3
 ---
 
