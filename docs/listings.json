@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/hw4/free_of_freedom.html",
       "/posts/hw3/normal_distribution_example.html",
       "/posts/hw2/textbook-chap8.html",
       "/posts/hw1/index.html"
