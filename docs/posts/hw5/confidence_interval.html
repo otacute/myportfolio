@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="hg.park">
+<meta name="dcterms.date" content="2024-07-31">
 
-<title>LS빅데이터 스쿨 포트폴리오 - myblog</title>
+<title>LS빅데이터 스쿨 포트폴리오 - Homework5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +102,25 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
 
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
 
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">LS빅데이터 스쿨 포트폴리오</span>
     </a>
   </div>
@@ -149,15 +131,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -168,210 +150,263 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Homework5</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Homework</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>hg.park </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 31, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Homework">Homework <span class="quarto-category-count">(5)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기" id="toc-챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기" class="nav-link active" data-scroll-target="#챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기">챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기</a>
+  <ul class="collapse">
+  <li><a href="#norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시" id="toc-norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시" class="nav-link" data-scroll-target="#norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시">norm.ppf() 사용해서 그릴 것, 모분산은 표본 분산을 사용해서 추정, 위 아래 수직 막대기로 표시</a></li>
+  <li><a href="#각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." id="toc-각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." class="nav-link" data-scroll-target="#각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.">2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">myblog</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기" class="level1">
+<h1>챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기</h1>
+<section id="norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시" class="level3">
+<h3 class="anchored" data-anchor-id="norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시">norm.ppf() 사용해서 그릴 것, 모분산은 표본 분산을 사용해서 추정, 위 아래 수직 막대기로 표시</h3>
+<div id="fc614677" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>raw_welfare <span class="op">=</span> pd.read_spss(<span class="st">"C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/koweps/Koweps_hpwc14_2019_beta2.sav"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>welfare <span class="op">=</span> raw_welfare.copy()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>welfare.shape</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>welfare <span class="op">=</span> welfare.rename(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    columns <span class="op">=</span> {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g3"</span> : <span class="st">"sex"</span>, </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g4"</span> : <span class="st">"birth"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g10"</span> : <span class="st">"marriage_type"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g11"</span> : <span class="st">"religion"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"p1402_8aq1"</span> : <span class="st">"income"</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_eco9"</span> : <span class="st">"code_job"</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_reg7"</span> : <span class="st">"code_region"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>welfare <span class="op">=</span> welfare[[<span class="st">"sex"</span>, <span class="st">"birth"</span>, <span class="st">"marriage_type"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"religion"</span>,<span class="st">"income"</span>,<span class="st">"code_job"</span>,<span class="st">"code_region"</span>]]</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'sex'</span>].value_counts()</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'sex'</span>] <span class="op">=</span> np.where(welfare[<span class="st">'sex'</span>] <span class="op">==</span> <span class="dv">1</span>, <span class="st">'male'</span>, <span class="st">'female'</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>welfare</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Homework" data-listing-date-sort="1722351600000" data-listing-file-modified-sort="1722375143968" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
-<div class="thumbnail">
-<p><a href="./posts/hw5/confidence_interval.html" class="no-external"></a></p><a href="./posts/hw5/confidence_interval.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw5\confidence_interval_files\figure-html\cell-3-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw5/confidence_interval.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw5/confidence_interval.html" class="no-external">Homework5</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw5/confidence_interval.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw5/confidence_interval.html" class="no-external">14418 rows × 7 columns</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw5/confidence_interval.html" class="no-external">
-<div class="listing-date">
-Jul 31, 2024
-</div>
-<div class="listing-author">
-hg.park
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Homework" data-listing-date-sort="1722178800000" data-listing-file-modified-sort="1722253438253" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="318">
-<div class="thumbnail">
-<p><a href="./posts/hw4/free_of_freedom.html" class="no-external"></a></p><a href="./posts/hw4/free_of_freedom.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw4\free_of_freedom_files\figure-html\cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw4/free_of_freedom.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw4/free_of_freedom.html" class="no-external">Homework4</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw4/free_of_freedom.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw4/free_of_freedom.html" class="no-external">n-1로 나눈 분산인 s_2의 분포는 모분산과 더 가깝고, 분포의 중앙에 모분산이 위치함. 반면 k_2의 분포는 모분산보다 왼쪽(더 작게)치우쳐 있음</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw4/free_of_freedom.html" class="no-external">
-<div class="listing-date">
-Jul 29, 2024
-</div>
-<div class="listing-author">
-hg.park
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Homework" data-listing-date-sort="1721833200000" data-listing-file-modified-sort="1721910566099" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="167">
-<div class="thumbnail">
-<p><a href="./posts/hw3/normal_distribution_example.html" class="no-external"></a></p><a href="./posts/hw3/normal_distribution_example.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw3\normal_distribution_example_files\figure-html\cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw3/normal_distribution_example.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw3/normal_distribution_example.html" class="no-external">Homework3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw3/normal_distribution_example.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw3/normal_distribution_example.html" class="no-external">(from scipy.stat import norm 사용금지)</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw3/normal_distribution_example.html" class="no-external">
-<div class="listing-date">
-Jul 25, 2024
-</div>
-<div class="listing-author">
-hg.park
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Homework" data-listing-date-sort="1721574000000" data-listing-file-modified-sort="1721895916681" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="465">
-<div class="thumbnail">
-<p><a href="./posts/hw2/textbook-chap8.html" class="no-external"></a></p><a href="./posts/hw2/textbook-chap8.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw2\textbook-chap8_files\figure-html\cell-4-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw2/textbook-chap8.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw2/textbook-chap8.html" class="no-external">Homework2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw2/textbook-chap8.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw2/textbook-chap8.html" class="no-external">Seaborn 패키지 불러오기</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw2/textbook-chap8.html" class="no-external">
-<div class="listing-date">
-Jul 22, 2024
-</div>
-<div class="listing-author">
-hg.park
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Homework" data-listing-date-sort="1720710000000" data-listing-file-modified-sort="1721895932648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
-<div class="thumbnail">
-<p><a href="./posts/hw1/index.html" class="no-external"></a></p><a href="./posts/hw1/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw1\index_files\figure-html\cell-16-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw1/index.html" class="no-external">Homework1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw1/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw1/index.html" class="no-external">Q1. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw1/index.html" class="no-external">
-<div class="listing-date">
-Jul 12, 2024
-</div>
-<div class="listing-author">
-hg.park
-</div>
-</a>
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">birth</th>
+<th data-quarto-table-cell-role="th">marriage_type</th>
+<th data-quarto-table-cell-role="th">religion</th>
+<th data-quarto-table-cell-role="th">income</th>
+<th data-quarto-table-cell-role="th">code_job</th>
+<th data-quarto-table-cell-role="th">code_region</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>female</td>
+<td>1945.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>male</td>
+<td>1948.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>male</td>
+<td>1942.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>107.0</td>
+<td>762.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>male</td>
+<td>1962.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>192.0</td>
+<td>855.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>female</td>
+<td>1963.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14413</td>
+<td>female</td>
+<td>1967.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">14414</td>
+<td>female</td>
+<td>1992.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14415</td>
+<td>male</td>
+<td>1995.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>910.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">14416</td>
+<td>female</td>
+<td>1998.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>200.0</td>
+<td>246.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14417</td>
+<td>male</td>
+<td>2001.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>14418 rows × 7 columns</p>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
+<div id="a16c1916" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'income'</span>].describe()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'income'</span>].isna().<span class="bu">sum</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'income'</span>].value_counts()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>sex_income <span class="op">=</span> welfare.dropna(subset<span class="op">=</span><span class="st">"income"</span>)<span class="op">\</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>       .groupby(<span class="st">"sex"</span>, as_index<span class="op">=</span><span class="va">False</span>)<span class="op">\</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>       .agg(mean_income <span class="op">=</span> (<span class="st">"income"</span>,<span class="st">"mean"</span>))</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>sex_income</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>sex_income, x<span class="op">=</span><span class="st">"sex"</span>, y<span class="op">=</span><span class="st">"mean_income"</span>, hue<span class="op">=</span><span class="st">"sex"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="confidence_interval_files/figure-html/cell-3-output-1.png" width="593" height="429" class="figure-img"></p>
+</figure>
 </div>
-</div></main> <!-- /main -->
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." class="level3">
+<h3 class="anchored" data-anchor-id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.">2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.</h3>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
