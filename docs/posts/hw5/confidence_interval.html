@@ -104,10 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
-
-
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -192,7 +189,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기" id="toc-챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기" class="nav-link active" data-scroll-target="#챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기">챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기</a>
   <ul class="collapse">
   <li><a href="#norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시" id="toc-norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시" class="nav-link" data-scroll-target="#norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시">norm.ppf() 사용해서 그릴 것, 모분산은 표본 분산을 사용해서 추정, 위 아래 수직 막대기로 표시</a></li>
-  <li><a href="#각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." id="toc-각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." class="nav-link" data-scroll-target="#각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.">2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -208,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기</h1>
 <section id="norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시" class="level3">
 <h3 class="anchored" data-anchor-id="norm.ppf-사용해서-그릴-것-모분산은-표본-분산을-사용해서-추정-위-아래-수직-막대기로-표시">norm.ppf() 사용해서 그릴 것, 모분산은 표본 분산을 사용해서 추정, 위 아래 수직 막대기로 표시</h3>
-<div id="fc614677" class="cell" data-execution_count="1">
+<div id="4ebbbfb7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -238,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'sex'</span>] <span class="op">=</span> np.where(welfare[<span class="st">'sex'</span>] <span class="op">==</span> <span class="dv">1</span>, <span class="st">'male'</span>, <span class="st">'female'</span>)</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>welfare</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
@@ -373,24 +369,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="a16c1916" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'income'</span>].describe()</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'income'</span>].isna().<span class="bu">sum</span>()</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'income'</span>].value_counts()</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>sex_income <span class="op">=</span> welfare.dropna(subset<span class="op">=</span><span class="st">"income"</span>)<span class="op">\</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>       .groupby(<span class="st">"sex"</span>, as_index<span class="op">=</span><span class="va">False</span>)<span class="op">\</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>       .agg(mean_income <span class="op">=</span> (<span class="st">"income"</span>,<span class="st">"mean"</span>))</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>sex_income</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>sex_income, x<span class="op">=</span><span class="st">"sex"</span>, y<span class="op">=</span><span class="st">"mean_income"</span>, hue<span class="op">=</span><span class="st">"sex"</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="268f62a8" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sex_income <span class="op">=</span> welfare.dropna(subset<span class="op">=</span><span class="st">"income"</span>)<span class="op">\</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       .groupby(<span class="st">"sex"</span>, as_index<span class="op">=</span><span class="va">False</span>)<span class="op">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>       .agg(mean_income <span class="op">=</span> (<span class="st">"income"</span>,<span class="st">"mean"</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            var_income <span class="op">=</span> (<span class="st">'income'</span>, <span class="st">'var'</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>            n_income <span class="op">=</span> (<span class="st">'income'</span>, <span class="st">'count'</span>))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>sex_income</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">mean_income</th>
+<th data-quarto-table-cell-role="th">var_income</th>
+<th data-quarto-table-cell-role="th">n_income</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>female</td>
+<td>186.293096</td>
+<td>17439.157372</td>
+<td>2245</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>male</td>
+<td>349.037571</td>
+<td>47463.961875</td>
+<td>2289</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="2fe5a77c" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>sex_income, x<span class="op">=</span><span class="st">"sex"</span>, y<span class="op">=</span><span class="st">"mean_income"</span>, hue<span class="op">=</span><span class="st">"sex"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="confidence_interval_files/figure-html/cell-3-output-1.png" width="593" height="429" class="figure-img"></p>
+<p><img src="confidence_interval_files/figure-html/cell-4-output-1.png" width="593" height="429" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -398,9 +427,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
 </div>
 </div>
-</section>
-<section id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." class="level3">
-<h3 class="anchored" data-anchor-id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.">2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.</h3>
+<div id="8dfcea2a" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mu</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mu_female <span class="op">=</span> sex_income.iloc[<span class="dv">0</span>,<span class="dv">1</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>mu_male   <span class="op">=</span> sex_income.iloc[<span class="dv">1</span>,<span class="dv">1</span>]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># var</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>female_var <span class="op">=</span> sex_income.iloc[<span class="dv">0</span>,<span class="dv">2</span>]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>male_var   <span class="op">=</span> sex_income.iloc[<span class="dv">1</span>,<span class="dv">2</span>]</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># n</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>female_n <span class="op">=</span> sex_income.iloc[<span class="dv">0</span>,<span class="dv">3</span>]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>male_n   <span class="op">=</span> sex_income.iloc[<span class="dv">1</span>,<span class="dv">3</span>]</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># norm.ppf를 이용하여 여성의 income 95% 신뢰구간 위치 구해보자</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>left_ci_female <span class="op">=</span> norm.ppf(<span class="fl">0.025</span>, loc <span class="op">=</span> mu_female, scale <span class="op">=</span> np.sqrt(female_var<span class="op">/</span>female_n))</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># np.float64(180.83045468346842)</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>right_ci_female <span class="op">=</span> norm.ppf(<span class="fl">0.975</span>, loc <span class="op">=</span> mu_female, scale <span class="op">=</span> np.sqrt(female_var<span class="op">/</span>female_n))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># np.float64(191.75573685327993)</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># norm.ppf를 이용하여 남성의 income 95% 신뢰구간 위치 구해보자</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>left_ci_male <span class="op">=</span> norm.ppf(<span class="fl">0.025</span>, loc <span class="op">=</span> mu_male, scale <span class="op">=</span> np.sqrt(male_var<span class="op">/</span>male_n))</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># np.float64(340.11259229974775)</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>right_ci_male <span class="op">=</span> norm.ppf(<span class="fl">0.975</span>, loc <span class="op">=</span> mu_male, scale <span class="op">=</span> np.sqrt(male_var<span class="op">/</span>male_n))</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># np.float64(357.96254968365116)</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> sex_income, x <span class="op">=</span> <span class="st">'sex'</span>, y <span class="op">=</span> <span class="st">'mean_income'</span>, hue <span class="op">=</span> <span class="st">'sex'</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>plt.vlines(x<span class="op">=</span><span class="dv">0</span>, ymin<span class="op">=</span>left_ci_female, ymax<span class="op">=</span>right_ci_female, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>plt.vlines(x<span class="op">=</span><span class="dv">1</span>, ymin<span class="op">=</span>left_ci_male, ymax<span class="op">=</span>right_ci_male, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="confidence_interval_files/figure-html/cell-5-output-1.png" width="593" height="429" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
+</div>
+</div>
 
 
 </section>
