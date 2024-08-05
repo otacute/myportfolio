@@ -256,7 +256,7 @@ H_a: \mu &lt; 16 \\
 <p><span class="math display">\[
 t = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
 \]</span></p>
-<div id="06367bdb" class="cell" data-execution_count="1">
+<div id="6863bc5a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>energy <span class="op">=</span> [<span class="fl">15.078</span>, <span class="fl">15.752</span>, <span class="fl">15.549</span>, <span class="fl">15.56</span>, <span class="fl">16.098</span>, <span class="fl">13.277</span>, <span class="fl">15.462</span>, <span class="fl">16.116</span>, <span class="fl">15.214</span>, <span class="fl">16.93</span>, <span class="fl">14.118</span>, <span class="fl">14.927</span>,<span class="fl">15.382</span>, <span class="fl">16.709</span>, <span class="fl">16.804</span>]</span>
@@ -298,7 +298,7 @@ t = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
 <figcaption>단측검정 p-value시각화</figcaption>
 </figure>
 </div>
-<div id="66eb5bac" class="cell" data-execution_count="2">
+<div id="f0f907ae" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 자유도 df</span></span>
@@ -310,11 +310,10 @@ t = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
 <pre><code>p-values = 0.04</code></pre>
 </div>
 </div>
-<p>유의수준 0.01(1%)보다 p-values(0.04)가 크므로, 귀무가설을 기각한다. 즉, 현대자동차의 신형 모델은 에너지 효율 1등급을 부여할 수 없다.</p>
 </section>
 <section id="현대자동차의-신형-모델의-평균-복합-에너지-소비효율에-대하여-95-신뢰구간을-구해보세요." class="level3">
 <h3 class="anchored" data-anchor-id="현대자동차의-신형-모델의-평균-복합-에너지-소비효율에-대하여-95-신뢰구간을-구해보세요.">6. 현대자동차의 신형 모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간을 구해보세요.</h3>
-<div id="9023bba0" class="cell" data-execution_count="3">
+<div id="dee4a696" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>CI_r <span class="op">=</span> x_bar <span class="op">+</span> t.ppf(<span class="fl">0.975</span>, df) <span class="op">*</span> (s<span class="op">/</span>np.sqrt(n))</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>CI_l <span class="op">=</span> x_bar <span class="op">+</span> t.ppf(<span class="fl">0.025</span>, df) <span class="op">*</span> (s<span class="op">/</span>np.sqrt(n))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"평균 복합 에너지 소비 효율의 95%신뢰 구간 = ("</span>, CI_l.<span class="bu">round</span>(<span class="dv">2</span>), <span class="st">"), ("</span>, CI_r.<span class="bu">round</span>(<span class="dv">2</span>) ,<span class="st">")"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
