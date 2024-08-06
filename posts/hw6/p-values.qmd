@@ -60,7 +60,7 @@ print("표본 갯수 n =", n)
 
 # t 분포를 따르는 표준화를 한 후 t값
 T = (x_bar - m0) / (s/np.sqrt(n))
-print("표준화 후 t값 =", T.round(2))
+print("검정통계량 =", T.round(2))
 ```
 
 ### 4. p‑value을 구하세요.
