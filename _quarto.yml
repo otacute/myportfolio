@@ -11,7 +11,7 @@ website:
       - text: About
         href: about.qmd
       - text: Blog
-        href: blog.qmd
+        href: post/index.qmd
         
 
 format:
