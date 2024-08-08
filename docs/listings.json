@@ -2,7 +2,6 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/index.html",
       "/posts/hw6/p-values.html",
       "/posts/hw5/confidence_interval.html",
       "/posts/hw4/free_of_freedom.html",

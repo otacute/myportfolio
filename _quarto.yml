@@ -6,18 +6,17 @@ website:
   title: "LS빅데이터 스쿨 포트폴리오"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
-      - href: blog.qmd
-        text: Blog
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+      - text: Blog
+        href: post/index.qmd
         
 
 format:
   html:
     theme: cosmo
-    css: styles.css
     toc: true
     
 
