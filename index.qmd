@@ -4,7 +4,7 @@ toc: false
 about:
     id: hero-heading
     template: jolla
-    image: aaa.jpg
+    image: ./img/data.png
     links:
         - icon: github
           text: github
