@@ -1,5 +1,5 @@
 ---
-title: "박한결 - 포트폴리오"
+title: ""
 toc: false
 about:
     id: hero-heading
@@ -8,8 +8,13 @@ about:
     links:
         - icon: github
           text: github
-          href: https://otacute.github.io/myportfolio/
+          href: https://github.com/otacute?tab=repositories
+        - icon: pen
+          text: blog
+          href: https://blog.naver.com/min_mimi_
+
+        
 ---
 
-안녕하세요 :)
-전력과 데이터 분석 및 시각화 분야에 관심이 많은 박한결입니다.
+안녕하세요! 
+전력 데이터 분석 및 시각화 분야에 관심이 많은 박한결입니다.

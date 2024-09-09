@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>myblog – Park Han Gyeol : Portfolio</title>
+<title>resume – **Park Han Gyeol : Portfolio**</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,65 +66,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -152,7 +92,7 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume.html"> 
+    <a class="nav-link active" href="./resume.html" aria-current="page"> 
 <span class="menu-text">Resume-Kor</span></a>
   </li>  
   <li class="nav-item">
@@ -160,7 +100,7 @@ window.Quarto = {
 <span class="menu-text">Resume-Eng</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -175,237 +115,424 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Homework">Homework <span class="quarto-category-count">(7)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#자기소개서" id="toc-자기소개서" class="nav-link active" data-scroll-target="#자기소개서">자기소개서</a></li>
+  <li><a href="#개인정보" id="toc-개인정보" class="nav-link" data-scroll-target="#개인정보">개인정보</a></li>
+  <li><a href="#학력사항" id="toc-학력사항" class="nav-link" data-scroll-target="#학력사항">학력사항</a></li>
+  <li><a href="#경력사항-전체경력-1년-2개월" id="toc-경력사항-전체경력-1년-2개월" class="nav-link" data-scroll-target="#경력사항-전체경력-1년-2개월">경력사항 (전체경력: 1년 2개월)</a></li>
+  <li><a href="#자격증" id="toc-자격증" class="nav-link" data-scroll-target="#자격증">자격증</a></li>
+  <li><a href="#어학" id="toc-어학" class="nav-link" data-scroll-target="#어학">어학</a></li>
+  <li><a href="#직무-관련-교육-사항" id="toc-직무-관련-교육-사항" class="nav-link" data-scroll-target="#직무-관련-교육-사항">직무 관련 교육 사항</a></li>
+  <li><a href="#활용가능-tool" id="toc-활용가능-tool" class="nav-link" data-scroll-target="#활용가능-tool">활용가능 Tool</a></li>
+  <li><a href="#기타활동" id="toc-기타활동" class="nav-link" data-scroll-target="#기타활동">기타활동</a></li>
+  <li><a href="#수행-프로젝트" id="toc-수행-프로젝트" class="nav-link" data-scroll-target="#수행-프로젝트">수행 프로젝트</a>
+  <ul class="collapse">
+  <li><a href="#프로젝트명" id="toc-프로젝트명" class="nav-link" data-scroll-target="#프로젝트명">프로젝트명</a></li>
+  <li><a href="#프로젝트명-1" id="toc-프로젝트명-1" class="nav-link" data-scroll-target="#프로젝트명-1">프로젝트명</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">myblog</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
+<section id="자기소개서" class="level1">
+<h1>자기소개서</h1>
+</section>
+<section id="개인정보" class="level1">
+<h1>개인정보</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>이름</td>
+<td>박 한결</td>
+</tr>
+<tr class="even">
+<td>영문</td>
+<td>Park HanGyeol</td>
+</tr>
+<tr class="odd">
+<td>생년월일</td>
+<td>970813</td>
+</tr>
+<tr class="even">
+<td>휴대폰</td>
+<td>010-2658-6918</td>
+</tr>
+<tr class="odd">
+<td>E-mail</td>
+<td>hg.park.970813@gmail.com</td>
+</tr>
+<tr class="even">
+<td>주소</td>
+<td>서울 신당동 468</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="학력사항" class="level1">
+<h1>학력사항</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 38%">
+<col style="width: 20%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>재학기간</th>
+<th>학교명 및 전공</th>
+<th>학점</th>
+<th>소재지</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2016. 03 ~ 2020. 02</td>
+<td>국립부경대학교 전자공학과</td>
+<td>3.61 / 4.5</td>
+<td>부산</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="경력사항-전체경력-1년-2개월" class="level1">
+<h1>경력사항 (전체경력: 1년 2개월)</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>근무기간</th>
+<th>근무회사</th>
+<th>부서</th>
+<th>직위</th>
+<th>담당직무</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2022. 04 ~ 2023. 05</td>
+<td>㈜다스코리아</td>
+<td>연구소</td>
+<td>매니저</td>
+<td>기술지원</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="자격증" class="level1">
+<h1>자격증</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 31%">
+<col style="width: 26%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>취득일자</th>
+<th>자격증/면허증</th>
+<th>발급처</th>
+<th>자격 번호</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023. 07. 07</td>
+<td>SQL 개발자(SQLD)</td>
+<td>한국데이터산업진흥원</td>
+<td>SQLD-049010662</td>
+</tr>
+<tr class="even">
+<td>2023. 06. 16</td>
+<td>데이터 분석 준전문가(ADsP)</td>
+<td>한국데이터산업진흥원</td>
+<td>ADsP-037008947</td>
+</tr>
+<tr class="odd">
+<td>2021. 06. 02</td>
+<td>전기공사기사</td>
+<td>한국산업인력공단</td>
+<td>21201170652W</td>
+</tr>
+<tr class="even">
+<td>2020. 12. 31</td>
+<td>전기기사</td>
+<td>한국산업인력공단</td>
+<td>20204170287P</td>
+</tr>
+<tr class="odd">
+<td>2020. 11. 06</td>
+<td>컴퓨터활용능력 1급</td>
+<td>대한상공회의소</td>
+<td>20-K9-100085</td>
+</tr>
+<tr class="even">
+<td>2020. 8. 19</td>
+<td>자동차 운전 면허 2종 보통</td>
+<td>부산지방경찰청</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="어학" class="level1">
+<h1>어학</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 28%">
+<col style="width: 13%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>기간</th>
+<th>시험</th>
+<th>점수</th>
+<th>기관</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2021. 12. 19</td>
+<td>TOEIC</td>
+<td>790점</td>
+<td>한국TOEIC위원회</td>
+</tr>
+<tr class="even">
+<td>2022. 02. 26</td>
+<td>TOEIC Speaking</td>
+<td>Intermediate Mid 3</td>
+<td>한국TOEIC위원회</td>
+</tr>
+<tr class="odd">
+<td>2023. 08. 18</td>
+<td>OPlc</td>
+<td>Intermediate Mid 2</td>
+<td>ACTFL</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="직무-관련-교육-사항" class="level1">
+<h1>직무 관련 교육 사항</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>교육명</th>
+<th>기간</th>
+<th>기관</th>
+<th>주요 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LS 빅데이터 스쿨 3기</td>
+<td>2024.07.08 ~ 2024.11.08(교육 진행중)</td>
+<td>LS</td>
+<td>파이썬 프로그래밍, 데이터 수집 및 관리, 통계 분석, 데이터 시각화, 파이썬 머신러닝, 딥러닝, 시각화 대시보드 개발</td>
+</tr>
+<tr class="even">
+<td>[백엔드] Python 첫걸음 시작하기</td>
+<td>2024.01.02 ~ 2024.02.12</td>
+<td>TECHIT</td>
+<td>변수와 자료형, 조건문/반복문, 리스트, 튜플, 딕셔너리, 객체지향 등 Python 기초 실습</td>
+</tr>
+<tr class="odd">
+<td>[데이터분석] 실무에 필요한 데이터 분석&amp;시각화</td>
+<td>2024.01.02 ~ 2024.02.12</td>
+<td>TECHIT</td>
+<td>데이터 분석 이론, 데이터 수집, 데이터 시각화, 데이터 분석 방법 실습</td>
+</tr>
+<tr class="even">
+<td>X-SCADA 기본과정</td>
+<td>2022.11.22 ~ 2022.11.23</td>
+<td>(주)자이솜</td>
+<td>X-SCADA를 활용한 HMI 설계 및 작화, 데이터 수집, 경보, 트렌드 보고서 출력, 카메라 연동 실습</td>
+</tr>
+<tr class="odd">
+<td>[기술]쉽게 배우는 MS-SQL SERVER기본</td>
+<td>2022.09.21 ~ 2022.09.23</td>
+<td>한국생산성본부</td>
+<td>MS-SQL을 이용하여 필요한 데이터를 추출하고 조작하는 방법 실습</td>
+</tr>
+<tr class="even">
+<td>Java 프로그래밍</td>
+<td>2022.08.22 ~ 2022.08.26</td>
+<td>한국생산성본부</td>
+<td>Java 개발환경 구축, 기본구조 이해, 객체지향 개념 이해 및 개발</td>
+</tr>
+<tr class="odd">
+<td>AutoCAD기초</td>
+<td>2022.07.25 ~ 2022.07.29</td>
+<td>한국생산성본부</td>
+<td>AutoCAD를 활용한 도면 작성 및 수정</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="활용가능-tool" class="level1">
+<h1>활용가능 Tool</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 29%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>활용가능 프로그램</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HMI</td>
+<td>GP-Pro Ex</td>
+<td>Proface의 HMI 작화 프로그램 사용</td>
+</tr>
+<tr class="even">
+<td>PLC</td>
+<td>Machine Expert</td>
+<td>Schneider Electric의 PLC 로직 프로그램</td>
+</tr>
+<tr class="odd">
+<td>SCADA</td>
+<td>X-SCADA</td>
+<td>국내 소프트웨어 업체 Xisom의 SCADA 소프트웨어</td>
+</tr>
+<tr class="even">
+<td>통신 프로토콜</td>
+<td>Modbus, OPC-UA</td>
+<td>다양한 하위 디바이스와 통신 가능한 산업용 프로토콜</td>
+</tr>
+<tr class="odd">
+<td>DBMS</td>
+<td>MS-SQL, Oracle DB</td>
+<td>데이터베이스 관리 및 질의 언어 사용</td>
+</tr>
+<tr class="even">
+<td>OA</td>
+<td>MS-PowerBI, MS-Reportbuilder</td>
+<td>데이터 시각화 및 보고서 작성 프로그램</td>
+</tr>
+<tr class="odd">
+<td>공학용</td>
+<td>MATLAB, VHDL</td>
+<td>통신 시스템 설계 및 FPGA 보드 입/출력 제어</td>
+</tr>
+<tr class="even">
+<td>언어</td>
+<td>Python</td>
+<td>데이터 전처리 및 시각화 강의 수강, Python을 활용한 데이터 분석 및 머신러닝 모델 예측 가능</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="기타활동" class="level1">
+<h1>기타활동</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 46%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>기간</th>
+<th>활동 내용</th>
+<th>기관</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2016.03 ~ 2017.12</td>
+<td>학과 학생회 활동 - 학생 사물함 관리, 축제 행사 부스 운영 등 학과 행사 진행</td>
+<td>국립부경대학교 전자공학과 학생회</td>
+</tr>
+<tr class="even">
+<td>2016.05.27 ~ 2016.05.29</td>
+<td>대학생 농촌봉사활동 – 농어촌 봉사 일손지원</td>
+<td>경상남도 합천군</td>
+</tr>
+<tr class="odd">
+<td>2016.07.26 ~ 2016.08.29</td>
+<td>재능기부 활동 - 초등학생 아동 미술 수업 진행</td>
+<td>부산광역시 남구 엄마품에 지역아동센터</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="수행-프로젝트" class="level1">
+<h1>수행 프로젝트</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>회사명</th>
+<th>부서</th>
+<th>직급</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(주)다스코리아</td>
+<td>연구소</td>
+<td>매니저</td>
+</tr>
+</tbody>
+</table>
+<section id="프로젝트명" class="level2">
+<h2 class="anchored" data-anchor-id="프로젝트명">프로젝트명</h2>
+<p>NOBLAND 송파 본사 건물 전력 및 화재감지 모니터링 시스템</p>
+<ul>
+<li>프로젝트 기간: 2022.10 ~ 2023.01</li>
+<li>주요 역할 및 담당:
+<ul>
+<li>전력 모니터링 시스템(PME) 화면 작화 및 대시보드 트렌드 알람 구성</li>
+<li>데이터 분석 역량 (SQL 및 리포트 생성) 인정받아 데이터베이스 관리 및 전력 소비량 계산 리포트 제공</li>
+<li>화재 감지 모니터링 데모 아키텍처 구성 및 X-SCADA 사용한 데모 시스템 구성</li>
+<li>분전반 내 디바이스 시운전 및 초기값 세팅 및 설치</li>
+</ul></li>
+</ul>
+<p>업무 성과: - 전력 모니터링 시스템 구상 및 PME 화면 작화 - MS-ReportBuilder 및 PowerBI 사용한 리포트 생성</p>
+</section>
+<section id="프로젝트명-1" class="level2">
+<h2 class="anchored" data-anchor-id="프로젝트명-1">프로젝트명</h2>
+<p>태림산업 창원 공장 전력 모니터링 시스템</p>
+<ul>
+<li>프로젝트 기간: 2022. 05 ~ 2022. 08</li>
+<li>주요 역할 및 담당:
+<ul>
+<li>전력 모니터링 시스템(PME) 화면 작화 및 대시보드 트렌드 알람 구성</li>
+</ul></li>
+</ul>
 
-    
-  
-    
-  </div>
-  
 
+</section>
+</section>
 
-</header>
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Homework" data-listing-date-sort="1725202800000" data-listing-file-modified-sort="1725627461053" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="611">
-<a href="./posts/hw7/chi.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts\hw7\chi_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Homework7
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="card-text listing-description">
-2022년에 실시 된 ADP 실기 시험의 통계파트 표준점수는 평균이 30, 표준편차가 5인 정규분포를 따른다고 한다.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-hg.park
-</div>
-<div class="listing-date">
-Sep 2, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Homework" data-listing-date-sort="1722783600000" data-listing-file-modified-sort="1722903047367" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="236">
-<a href="./posts/hw6/p-values.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts\hw6\p-value.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Homework6
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="card-text listing-description">
-슬통 자동차는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여한다고 한다.…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-hg.park
-</div>
-<div class="listing-date">
-Aug 5, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Homework" data-listing-date-sort="1722351600000" data-listing-file-modified-sort="1722377937096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="311">
-<a href="./posts/hw5/confidence_interval.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts\hw5\confidence_interval_files\figure-html\cell-4-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Homework5
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="card-text listing-description">
-14418 rows × 7 columns
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-hg.park
-</div>
-<div class="listing-date">
-Jul 31, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Homework" data-listing-date-sort="1722178800000" data-listing-file-modified-sort="1722253438253" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="318">
-<a href="./posts/hw4/free_of_freedom.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts\hw4\free_of_freedom_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Homework4
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="card-text listing-description">
-n-1로 나눈 분산인 s_2의 분포는 모분산과 더 가깝고, 분포의 중앙에 모분산이 위치함. 반면 k_2의 분포는 모분산보다 왼쪽(더 작게)치우쳐 있음
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-hg.park
-</div>
-<div class="listing-date">
-Jul 29, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Homework" data-listing-date-sort="1721833200000" data-listing-file-modified-sort="1721910566099" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="167">
-<a href="./posts/hw3/normal_distribution_example.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts\hw3\normal_distribution_example_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Homework3
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="card-text listing-description">
-(from scipy.stat import norm 사용금지)
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-hg.park
-</div>
-<div class="listing-date">
-Jul 25, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="Homework" data-listing-date-sort="1721574000000" data-listing-file-modified-sort="1721895916681" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="465">
-<a href="./posts/hw2/textbook-chap8.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts\hw2\textbook-chap8_files\figure-html\cell-4-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Homework2
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="card-text listing-description">
-Seaborn 패키지 불러오기
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-hg.park
-</div>
-<div class="listing-date">
-Jul 22, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="Homework" data-listing-date-sort="1720710000000" data-listing-file-modified-sort="1721895932648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
-<a href="./posts/hw1/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts\hw1\index_files\figure-html\cell-16-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Homework1
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="card-text listing-description">
-Q1. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-hg.park
-</div>
-<div class="listing-date">
-Jul 12, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

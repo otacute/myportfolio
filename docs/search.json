@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "박한결 - 포트폴리오",
+    "title": "**Park Han Gyeol : Portfolio**",
     "section": "",
-    "text": "안녕하세요 :) 전력과 데이터 분석 및 시각화 분야에 관심이 많은 박한결입니다."
+    "text": "안녕하세요! 전력 데이터 분석 및 시각화 분야에 관심이 많은 박한결입니다."
   },
   {
     "objectID": "index.html#홈페이지-첫-화면입니다",
@@ -16,9 +16,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Hangyeol Park",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n2"
+    "text": "Mobile: (+82 10) 2658-6918\nE-mail: hg.park.970813@gmail.com\n\n\nI am an experienced engineer with extensive experience in energy solutions, possessing a nuanced understanding of the complexities within the electrical industry gained through learning various automation products in addition to energy solutions.\n\n\n\n\nData analysis and visualization\nMS-SQL\nPython\nPLC (Schnieder)\nSCADA (X-SCADA)\nHMI (Proface)\nPower equipment\nPowerBI, Reportbuilder\nModbus\nWiring\n\n\n\n\n\n\nEngineer\n- Built a Data Monitoring System Using PME (Power Monitoring Expert)\n- Provided installation support and manual writing for power metering devices\n- Delivered basic electrical education for users\n- Configured UI using SCADA and data management programs (RDBMS) for data preprocessing and visualization\n- Generated reports as per customer requirements using Python\n- Expanded sub-devices and parent devices using Modbus RTU/TCP\n- Supported wiring operations for panel production including wiring for product and communication lines\n\n\n\n\nPukyong National University, Busan, Korea\nBachelor of Science in Electrical Engineering (Mar. 2016 – Feb. 2020)\nCoursework: Electromagnetics, Circuit Theory, Control Engineering, etc.\n\n\n\n\nEnglish: Conversational\n\nTOEIC: Scored 790 (Dec. 2021)\n\nTOEIC Speaking: Scored Intermediate Mid 3 (130, Feb. 2022)\n\n\n\n\n\nEngineer Electricity\n\nEngineer Electric Work\n\nSQL Developer (SQLD)\n\nAdvanced Data Analytics Semi-Professional (ADsP)\n\nComputer Specialist in Spreadsheet & Database (Level 1)\n\nClass 2 Driver’s License"
   },
   {
     "objectID": "hw1.html",
@@ -173,5 +173,145 @@
     "title": "Homework7",
     "section": "",
     "text": "\\[\n자유도가 𝑘인 카이제곱분포를 따르는 확률변수 𝑋 를 X \\sim \\chi^2(k)과 같이 나타내고,\n이 확률변수의 확률밀도함수는 다음과 같습니다.\n\\] \\[\nf_X(x; k) = \\frac{1}{2^{k/2} \\Gamma(k/2)} x^{k/2-1} e^{-x/2}\n\\]\n\n\n\nfrom scipy.stats import chi2\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nk = np.linspace(0, 40, 500)\ny = chi2.pdf(k, df=4)\nplt.plot(k, y)\n\n\n\n\n\n\n\n\n\n\n\n\nchi2.cdf(5, df=4) - chi2.cdf(3, df=4)\n\nnp.float64(0.27052790518742903)\n\n\n\n\n\n\nnp.random.seed(20240902)\nk=chi2.rvs(df=4, size=1000)\nplt.hist(k)\n\n(array([237., 295., 227., 111.,  58.,  35.,  19.,   9.,   7.,   2.]),\n array([ 0.06952138,  1.84067646,  3.61183154,  5.38298663,  7.15414171,\n         8.92529679, 10.69645188, 12.46760696, 14.23876204, 16.00991713,\n        17.78107221]),\n &lt;BarContainer object of 10 artists&gt;)\n\n\n\n\n\n\n\n\n\n\n\n\n\nchi2.ppf(0.95, df=4)\n\nnp.float64(9.487729036781154)\n\n\n\n\n\n\nnp.percentile(k, 95)\n\nnp.float64(9.853854661290491)\n\n\n\n\n\n• 같은 방법으로 500개의 \\[s^2\\] 들, \\[s_{1}^2\\], \\[s_{2}^2\\], …, \\[s_{500}^2\\] 발생시킵니다. • 발생한 500개의 \\[s^2\\] 들 각각에 4.75를 곱하고, 그것들의 히스토그램을 그려보세요. (히스토그램을 그릴 때 probability = TRUE 옵션을 사용해서 그릴 것) • 위에서 그린 히스토그램에 자유도가 19인 카이제곱분포 확률밀도함수를 겹쳐그려보세요.\n\nnp.random.seed(20240902)\nvar_samples = []\n\nfor i in range(500):\n    x = norm.rvs(loc=3, scale=2, size=20)\n    var_samples.append(np.var(x, ddof=1))\n\nvar_samples = np.array(var_samples) * 4.75\nplt.hist(var_samples, density=True)\n\nnp.random.seed(20240902)\nk = np.linspace(0, var_samples.max(), 500)\ny = chi2.pdf(k, df=19)\nplt.plot(k, y, color=\"red\")"
+  },
+  {
+    "objectID": "about.html#objective",
+    "href": "about.html#objective",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "I am an experienced engineer with extensive experience in energy solutions, possessing a nuanced understanding of the complexities within the electrical industry gained through learning various automation products in addition to energy solutions."
+  },
+  {
+    "objectID": "about.html#core-competencies",
+    "href": "about.html#core-competencies",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "Data analysis and visualization\nMS-SQL\nPython\nPLC (Schnieder)\nSCADA (X-SCADA)\nHMI (Proface)\nPower equipment\nPowerBI, Reportbuilder\nModbus\nWiring"
+  },
+  {
+    "objectID": "about.html#professional-experience",
+    "href": "about.html#professional-experience",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "Engineer\n- Built a Data Monitoring System Using PME (Power Monitoring Expert)\n- Provided installation support and manual writing for power metering devices\n- Delivered basic electrical education for users\n- Configured UI using SCADA and data management programs (RDBMS) for data preprocessing and visualization\n- Generated reports as per customer requirements using Python\n- Expanded sub-devices and parent devices using Modbus RTU/TCP\n- Supported wiring operations for panel production including wiring for product and communication lines"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "Pukyong National University, Busan, Korea\nBachelor of Science in Electrical Engineering (Mar. 2016 – Feb. 2020)\nCoursework: Electromagnetics, Circuit Theory, Control Engineering, etc."
+  },
+  {
+    "objectID": "about.html#skills-languages",
+    "href": "about.html#skills-languages",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "English: Conversational\n\nTOEIC: Scored 790 (Dec. 2021)\n\nTOEIC Speaking: Scored Intermediate Mid 3 (130, Feb. 2022)"
+  },
+  {
+    "objectID": "about.html#licenses-certifications",
+    "href": "about.html#licenses-certifications",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "Engineer Electricity\n\nEngineer Electric Work\n\nSQL Developer (SQLD)\n\nAdvanced Data Analytics Semi-Professional (ADsP)\n\nComputer Specialist in Spreadsheet & Database (Level 1)\n\nClass 2 Driver’s License"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "자기소개서",
+    "section": "",
+    "text": "박 한결\n\n\n\nPark HanGyeol\n\n\n\n970813\n\n\n\n010-2658-6918\n\n\n\nhg.park.970813@gmail.com\n\n\n\n서울 신당동 468"
+  },
+  {
+    "objectID": "resume.html#이름",
+    "href": "resume.html#이름",
+    "title": "자기소개서",
+    "section": "",
+    "text": "박 한결"
+  },
+  {
+    "objectID": "resume.html#영문",
+    "href": "resume.html#영문",
+    "title": "자기소개서",
+    "section": "",
+    "text": "Park HanGyeol"
+  },
+  {
+    "objectID": "resume.html#생년월일",
+    "href": "resume.html#생년월일",
+    "title": "자기소개서",
+    "section": "",
+    "text": "970813"
+  },
+  {
+    "objectID": "resume.html#지원분야",
+    "href": "resume.html#지원분야",
+    "title": "자기소개서",
+    "section": "",
+    "text": "PLC & HMI Engineer"
+  },
+  {
+    "objectID": "resume.html#휴대폰",
+    "href": "resume.html#휴대폰",
+    "title": "자기소개서",
+    "section": "",
+    "text": "010-2658-6918"
+  },
+  {
+    "objectID": "resume.html#e-mail",
+    "href": "resume.html#e-mail",
+    "title": "자기소개서",
+    "section": "",
+    "text": "hg.park.970813@gmail.com"
+  },
+  {
+    "objectID": "resume.html#주소",
+    "href": "resume.html#주소",
+    "title": "자기소개서",
+    "section": "",
+    "text": "서울 신당동 468"
+  },
+  {
+    "objectID": "resume.html#회사명",
+    "href": "resume.html#회사명",
+    "title": "자기소개서",
+    "section": "회사명",
+    "text": "회사명\n㈜다스코리아"
+  },
+  {
+    "objectID": "resume.html#부서",
+    "href": "resume.html#부서",
+    "title": "자기소개서",
+    "section": "부서",
+    "text": "부서\n연구소"
+  },
+  {
+    "objectID": "resume.html#직급",
+    "href": "resume.html#직급",
+    "title": "자기소개서",
+    "section": "직급",
+    "text": "직급\n매니저\n\n프로젝트명\nNOBLAND 송파 본사 건물 전력 및 화재감지 모니터링 시스템\n\n프로젝트 기간: 2022.10 ~ 2023.01\n주요 역할 및 담당:\n\n전력 모니터링 시스템(PME) 화면 작화 및 대시보드 트렌드 알람 구성\n데이터 분석 역량 (SQL 및 리포트 생성) 인정받아 데이터베이스 관리 및 전력 소비량 계산 리포트 제공\n화재 감지 모니터링 데모 아키텍처 구성 및 X-SCADA 사용한 데모 시스템 구성\n분전반 내 디바이스 시운전 및 초기값 세팅 및 설치\n\n\n업무 성과: - 전력 모니터링 시스템 구상 및 PME 화면 작화 - MS-ReportBuilder 및 PowerBI 사용한 리포트 생성"
+  },
+  {
+    "objectID": "resume.html#프로젝트명-1",
+    "href": "resume.html#프로젝트명-1",
+    "title": "자기소개서",
+    "section": "프로젝트명",
+    "text": "프로젝트명\n태림산업 창원 공장 전력 모니터링 시스템\n\n프로젝트 기간: 2022. 05 ~ 2022. 08\n주요 역할 및 담당:\n\n전력 모니터링 시스템(PME) 화면 작화 및 대시보드 트렌드 알람 구성"
+  },
+  {
+    "objectID": "resume.html#개인정보",
+    "href": "resume.html#개인정보",
+    "title": "자기소개서",
+    "section": "",
+    "text": "항목\n내용\n\n\n\n\n이름\n박 한결\n\n\n영문\nPark HanGyeol\n\n\n생년월일\n970813\n\n\n휴대폰\n010-2658-6918\n\n\nE-mail\nhg.park.970813@gmail.com\n\n\n주소\n서울 신당동 468"
+  },
+  {
+    "objectID": "resume.html#프로젝트명",
+    "href": "resume.html#프로젝트명",
+    "title": "자기소개서",
+    "section": "프로젝트명",
+    "text": "프로젝트명\nNOBLAND 송파 본사 건물 전력 및 화재감지 모니터링 시스템\n\n프로젝트 기간: 2022.10 ~ 2023.01\n주요 역할 및 담당:\n\n전력 모니터링 시스템(PME) 화면 작화 및 대시보드 트렌드 알람 구성\n데이터 분석 역량 (SQL 및 리포트 생성) 인정받아 데이터베이스 관리 및 전력 소비량 계산 리포트 제공\n화재 감지 모니터링 데모 아키텍처 구성 및 X-SCADA 사용한 데모 시스템 구성\n분전반 내 디바이스 시운전 및 초기값 세팅 및 설치\n\n\n업무 성과: - 전력 모니터링 시스템 구상 및 PME 화면 작화 - MS-ReportBuilder 및 PowerBI 사용한 리포트 생성"
   }
 ]
