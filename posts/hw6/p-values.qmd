@@ -6,7 +6,7 @@ categories: [Homework]
 jupyter: python3
 ---
   
-# 신형 자동차의 에너지 소비효율 등급
+# 신형 자동차의 에너지 소비효율 등급 
 
 ## ADP 교재 57p 연습 문제
 
