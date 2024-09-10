@@ -46,7 +46,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "Homework7\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nSep 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework6\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nAug 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework5\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 31, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework4\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework3\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework2\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework1\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Homework8\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nSep 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework7\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nSep 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework6\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nAug 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework5\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 31, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework4\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework3\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework2\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework1\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw3/textbook-chap8.html",
@@ -313,5 +313,89 @@
     "title": "자기소개서",
     "section": "프로젝트명",
     "text": "프로젝트명\nNOBLAND 송파 본사 건물 전력 및 화재감지 모니터링 시스템\n\n프로젝트 기간: 2022.10 ~ 2023.01\n주요 역할 및 담당:\n\n전력 모니터링 시스템(PME) 화면 작화 및 대시보드 트렌드 알람 구성\n데이터 분석 역량 (SQL 및 리포트 생성) 인정받아 데이터베이스 관리 및 전력 소비량 계산 리포트 제공\n화재 감지 모니터링 데모 아키텍처 구성 및 X-SCADA 사용한 데모 시스템 구성\n분전반 내 디바이스 시운전 및 초기값 세팅 및 설치\n\n\n업무 성과: - 전력 모니터링 시스템 구상 및 PME 화면 작화 - MS-ReportBuilder 및 PowerBI 사용한 리포트 생성"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html",
+    "href": "posts/hw8/logisitc.html",
+    "title": "Homework8",
+    "section": "",
+    "text": "종속변수 :\n- 백혈병 세포 관측 불가 여부 (REMISS), 1이면 관측 안됨을 의미\n독립변수 :\n- 골수의 세포성 (CELL)\n- 골수편의 백혈구 비율 (SMEAR)\n- 골수의 백혈병 세포 침투 비율 (INFIL)\n- 골수 백혈병 세포의 라벨링 인덱스 (LI)\n- 말초혈액의 백혈병 세포 수 (BLAST)\n- 치료 시작 전 최고 체온 (TEMP)\n\n\n\n\nimport numpy as np\nimport pandas as pd\nimport statsmodels.api as sm\n\ndf = pd.read_table('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/leukemia_remission.txt', delimiter='\\t')\ndf\n\nmodel = sm.formula.logit(\"REMISS ~ CELL + SMEAR + INFIL + LI + BLAST + TEMP\", data=df).fit()\nprint(model.summary())\n\nOptimization terminated successfully.\n         Current function value: 0.399886\n         Iterations 10\n                           Logit Regression Results                           \n==============================================================================\nDep. Variable:                 REMISS   No. Observations:                   27\nModel:                          Logit   Df Residuals:                       20\nMethod:                           MLE   Df Model:                            6\nDate:                Tue, 10 Sep 2024   Pseudo R-squ.:                  0.3718\nTime:                        10:52:43   Log-Likelihood:                -10.797\nconverged:                       True   LL-Null:                       -17.186\nCovariance Type:            nonrobust   LLR p-value:                   0.04670\n==============================================================================\n                 coef    std err          z      P&gt;|z|      [0.025      0.975]\n------------------------------------------------------------------------------\nIntercept     64.2581     74.965      0.857      0.391     -82.670     211.187\nCELL          30.8301     52.135      0.591      0.554     -71.353     133.013\nSMEAR         24.6863     61.526      0.401      0.688     -95.903     145.275\nINFIL        -24.9745     65.281     -0.383      0.702    -152.923     102.974\nLI             4.3605      2.658      1.641      0.101      -0.849       9.570\nBLAST         -0.0115      2.266     -0.005      0.996      -4.453       4.430\nTEMP        -100.1734     77.753     -1.288      0.198    -252.567      52.220\n==============================================================================\n\nPossibly complete quasi-separation: A fraction 0.11 of observations can be\nperfectly predicted. This might indicate that there is complete\nquasi-separation. In this case some parameters will not be identified.\n\n\n\n\n\n\n# 검정통계량 stat_value = -2(l(beta_hat)(0) - l(beta_hat))\n# 검정통계량 stat_value = -2((LL-Null) - (Log-Likelihood))\nstat_value = 2 * ((-17.186)-(-10.797))\nstat_value\n\n-12.777999999999999\n\n\n\nLLR p-value: 0.04670\n유의수준 5%일때 p-value이 0.04670으로 유의수준 보다 작기에 이 모델은 유의하다.\n\n\n\n\n\n유의수준 0.2를 기준으로 통계적으로 유의한 변수는 2개, 유의한 변수는 LI(0.101), TEMP(0.198)이다.\n\n\n\n\n\nCELL (골수의 세포성): 65%\nSMEAR (골수편의 백혈구 비율): 45%\nINFIL (골수의 백혈병 세포 침투 비율): 55%\nLI (골수 백혈병 세포의 라벨링 인덱스): 1.2\nBLAST (말초혈액의 백혈병 세포 수): 1.1세포/μL\nTEMP (치료 시작 전 최고 체온): 0.9\n\n\n# odds = exp(64.2581 + 30.8301 * x1 + 24.6863 * x2 + (-24.9745) * x3 + 4.3605 * x4 + (-0.0115) * x5 + (-100.1734) * x6)\nmy_odds=np.exp(64.2581 + 30.8301 * 0.65 + 24.6863 * 0.45 + (-24.9745) * 0.55 + 4.3605 * 1.2 + (-0.0115) * 1.1 + (-100.1734) * 0.9)\nmy_odds\n\nnp.float64(0.03817459641135519)\n\n\n\n\n\n\nmy_odds / (my_odds+1) # 백혈병 세포가 관측되지 않을 확률 : 0.03677\n\nnp.float64(0.03677088280074742)\n\n\n\n\n\n\nTEMP 변수의 계수 : -100.1734\nTemp가 1도 증가할 때 마다 로그 오즈가 100.1734만큼 감소한다.\n\n\nnp.exp(-100.1734) # 0에 가까운 수치\n\nnp.float64(3.1278444454718357e-44)\n\n\n\n온도가 1단위 증가해도 백혈병 비관측에 대한 오즈가 증가하지 않는다.\n\n\n\n\n\nfrom scipy.stats import norm\nimport numpy as np\n\n# 오즈비의 신뢰구간 계산\nz = norm.ppf(0.995)  # 99% 신뢰구간에 해당하는 z값 (정규분포의 99.5 퍼센타일)\ncoef = 30.8301  # 로그 오즈비 계수\nstd_err = 52.135  # 표준 오차\n\nconf_int_low = np.exp(coef - z * std_err)  # 표준 오차를 이용한 계산\nconf_int_high = np.exp(coef + z * std_err)\nprint(conf_int_low, conf_int_high)\n\n1.1683218982002717e-45 5.141881884993857e+71\n\n\n\n\n\n\ndf['predicted'] = model.predict() &gt;= 0.5\nfrom sklearn.metrics import confusion_matrix\nconf_matrix = confusion_matrix(df['REMISS'], df['predicted'])\nprint(conf_matrix)\n\n# 실제 값과 예측 값\n# True Positive (TP): 실제 값이 1이고 예측 값도 1인 경우\n# True Negative (TN): 실제 값이 0이고 예측 값도 0인 경우\n# False Positive (FP): 실제 값이 0인데 예측 값이 1인 경우\n# False Negative (FN): 실제 값이 1인데 예측 값이 0인 경우\n\nactual = df['REMISS']  # 실제 값 (정답)\npredicted = model.predict() &gt;= 0.5  # 예측값 (확률이 50% 이상일 때 1로 처리)\n\n# 혼동 행렬 초기화\nTP = TN = FP = FN = 0\n\n# 혼동 행렬 계산\nfor a, p in zip(actual, predicted):\n    if a == 1 and p == 1:\n        TP += 1\n    elif a == 0 and p == 0:\n        TN += 1\n    elif a == 0 and p == 1:\n        FP += 1\n    elif a == 1 and p == 0:\n        FN += 1\n\n# 결과 출력\nconf_matrix = np.array([[TN, FP], [FN, TP]]).reshape(2,2)\nprint(\"Confusion Matrix:\")\nprint(conf_matrix)\n\n[[15  3]\n [ 4  5]]\nConfusion Matrix:\n[[15  3]\n [ 4  5]]\n\n\n\n\n\n\nfrom sklearn.metrics import confusion_matrix, accuracy_score, f1_score\naccuracy1 = accuracy_score(df['REMISS'], df['predicted'])\naccuracy2 = (conf_matrix[0, 0] + conf_matrix[1, 1]) / conf_matrix.sum()\nprint(accuracy1)\nprint(accuracy2)\n\n0.7407407407407407\n0.7407407407407407\n\n\n\n\n\n\nf1 = f1_score(df['REMISS'], df['predicted'])\nprint(f1)\n\n0.5882352941176471"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#data-exploration",
+    "href": "posts/hw8/logisitc.html#data-exploration",
+    "title": "Homework8",
+    "section": "",
+    "text": "종속변수 :\n- 백혈병 세포 관측 불가 여부 (REMISS), 1이면 관측 안됨을 의미\n독립변수 :\n- 골수의 세포성 (CELL)\n- 골수편의 백혈구 비율 (SMEAR)\n- 골수의 백혈병 세포 침투 비율 (INFIL)\n- 골수 백혈병 세포의 라벨링 인덱스 (LI)\n- 말초혈액의 백혈병 세포 수 (BLAST)\n- 치료 시작 전 최고 체온 (TEMP)"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-1.-데이터를-로드하고-로지스틱-회귀모델을-적합하고-회귀-표를-작성하세요.",
+    "href": "posts/hw8/logisitc.html#문제-1.-데이터를-로드하고-로지스틱-회귀모델을-적합하고-회귀-표를-작성하세요.",
+    "title": "Homework8",
+    "section": "",
+    "text": "import numpy as np\nimport pandas as pd\nimport statsmodels.api as sm\n\ndf = pd.read_table('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/leukemia_remission.txt', delimiter='\\t')\ndf\n\nmodel = sm.formula.logit(\"REMISS ~ CELL + SMEAR + INFIL + LI + BLAST + TEMP\", data=df).fit()\nprint(model.summary())\n\nOptimization terminated successfully.\n         Current function value: 0.399886\n         Iterations 10\n                           Logit Regression Results                           \n==============================================================================\nDep. Variable:                 REMISS   No. Observations:                   27\nModel:                          Logit   Df Residuals:                       20\nMethod:                           MLE   Df Model:                            6\nDate:                Tue, 10 Sep 2024   Pseudo R-squ.:                  0.3718\nTime:                        10:52:43   Log-Likelihood:                -10.797\nconverged:                       True   LL-Null:                       -17.186\nCovariance Type:            nonrobust   LLR p-value:                   0.04670\n==============================================================================\n                 coef    std err          z      P&gt;|z|      [0.025      0.975]\n------------------------------------------------------------------------------\nIntercept     64.2581     74.965      0.857      0.391     -82.670     211.187\nCELL          30.8301     52.135      0.591      0.554     -71.353     133.013\nSMEAR         24.6863     61.526      0.401      0.688     -95.903     145.275\nINFIL        -24.9745     65.281     -0.383      0.702    -152.923     102.974\nLI             4.3605      2.658      1.641      0.101      -0.849       9.570\nBLAST         -0.0115      2.266     -0.005      0.996      -4.453       4.430\nTEMP        -100.1734     77.753     -1.288      0.198    -252.567      52.220\n==============================================================================\n\nPossibly complete quasi-separation: A fraction 0.11 of observations can be\nperfectly predicted. This might indicate that there is complete\nquasi-separation. In this case some parameters will not be identified."
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-2.-해당-모델은-통계적으로-유의한가요-그-이유를-검정통계량를-사용해서-설명하시오.",
+    "href": "posts/hw8/logisitc.html#문제-2.-해당-모델은-통계적으로-유의한가요-그-이유를-검정통계량를-사용해서-설명하시오.",
+    "title": "Homework8",
+    "section": "",
+    "text": "# 검정통계량 stat_value = -2(l(beta_hat)(0) - l(beta_hat))\n# 검정통계량 stat_value = -2((LL-Null) - (Log-Likelihood))\nstat_value = 2 * ((-17.186)-(-10.797))\nstat_value\n\n-12.777999999999999\n\n\n\nLLR p-value: 0.04670\n유의수준 5%일때 p-value이 0.04670으로 유의수준 보다 작기에 이 모델은 유의하다."
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-3.-유의수준이-0.2를-기준으로-통계적으로-유의한-변수는-몇개이며-어느-변수-인가요",
+    "href": "posts/hw8/logisitc.html#문제-3.-유의수준이-0.2를-기준으로-통계적으로-유의한-변수는-몇개이며-어느-변수-인가요",
+    "title": "Homework8",
+    "section": "",
+    "text": "유의수준 0.2를 기준으로 통계적으로 유의한 변수는 2개, 유의한 변수는 LI(0.101), TEMP(0.198)이다."
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-4.-다음-환자에-대한-오즈는-얼마인가요",
+    "href": "posts/hw8/logisitc.html#문제-4.-다음-환자에-대한-오즈는-얼마인가요",
+    "title": "Homework8",
+    "section": "",
+    "text": "CELL (골수의 세포성): 65%\nSMEAR (골수편의 백혈구 비율): 45%\nINFIL (골수의 백혈병 세포 침투 비율): 55%\nLI (골수 백혈병 세포의 라벨링 인덱스): 1.2\nBLAST (말초혈액의 백혈병 세포 수): 1.1세포/μL\nTEMP (치료 시작 전 최고 체온): 0.9\n\n\n# odds = exp(64.2581 + 30.8301 * x1 + 24.6863 * x2 + (-24.9745) * x3 + 4.3605 * x4 + (-0.0115) * x5 + (-100.1734) * x6)\nmy_odds=np.exp(64.2581 + 30.8301 * 0.65 + 24.6863 * 0.45 + (-24.9745) * 0.55 + 4.3605 * 1.2 + (-0.0115) * 1.1 + (-100.1734) * 0.9)\nmy_odds\n\nnp.float64(0.03817459641135519)"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-5.-위-환자의-혈액에서-백혈병-세포가-관측되지-않은-확률은-얼마인가요",
+    "href": "posts/hw8/logisitc.html#문제-5.-위-환자의-혈액에서-백혈병-세포가-관측되지-않은-확률은-얼마인가요",
+    "title": "Homework8",
+    "section": "",
+    "text": "my_odds / (my_odds+1) # 백혈병 세포가 관측되지 않을 확률 : 0.03677\n\nnp.float64(0.03677088280074742)"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-6.-temp-변수의-계수는-얼마이며-해당-계수를-사용해서-temp-변수가-백혈병-치료에-대한-영향을-설명하시오.",
+    "href": "posts/hw8/logisitc.html#문제-6.-temp-변수의-계수는-얼마이며-해당-계수를-사용해서-temp-변수가-백혈병-치료에-대한-영향을-설명하시오.",
+    "title": "Homework8",
+    "section": "",
+    "text": "TEMP 변수의 계수 : -100.1734\nTemp가 1도 증가할 때 마다 로그 오즈가 100.1734만큼 감소한다.\n\n\nnp.exp(-100.1734) # 0에 가까운 수치\n\nnp.float64(3.1278444454718357e-44)\n\n\n\n온도가 1단위 증가해도 백혈병 비관측에 대한 오즈가 증가하지 않는다."
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-7.-cell-변수의-99-오즈비에-대한-신뢰구간을-구하시오.",
+    "href": "posts/hw8/logisitc.html#문제-7.-cell-변수의-99-오즈비에-대한-신뢰구간을-구하시오.",
+    "title": "Homework8",
+    "section": "",
+    "text": "from scipy.stats import norm\nimport numpy as np\n\n# 오즈비의 신뢰구간 계산\nz = norm.ppf(0.995)  # 99% 신뢰구간에 해당하는 z값 (정규분포의 99.5 퍼센타일)\ncoef = 30.8301  # 로그 오즈비 계수\nstd_err = 52.135  # 표준 오차\n\nconf_int_low = np.exp(coef - z * std_err)  # 표준 오차를 이용한 계산\nconf_int_high = np.exp(coef + z * std_err)\nprint(conf_int_low, conf_int_high)\n\n1.1683218982002717e-45 5.141881884993857e+71"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-8.-주어진-데이터에-대하여-로지스틱-회귀-모델의-예측-확률을-구한-후-50-이상인-경우-1로-처리하여-혼동-행렬를-구하시오.",
+    "href": "posts/hw8/logisitc.html#문제-8.-주어진-데이터에-대하여-로지스틱-회귀-모델의-예측-확률을-구한-후-50-이상인-경우-1로-처리하여-혼동-행렬를-구하시오.",
+    "title": "Homework8",
+    "section": "",
+    "text": "df['predicted'] = model.predict() &gt;= 0.5\nfrom sklearn.metrics import confusion_matrix\nconf_matrix = confusion_matrix(df['REMISS'], df['predicted'])\nprint(conf_matrix)\n\n# 실제 값과 예측 값\n# True Positive (TP): 실제 값이 1이고 예측 값도 1인 경우\n# True Negative (TN): 실제 값이 0이고 예측 값도 0인 경우\n# False Positive (FP): 실제 값이 0인데 예측 값이 1인 경우\n# False Negative (FN): 실제 값이 1인데 예측 값이 0인 경우\n\nactual = df['REMISS']  # 실제 값 (정답)\npredicted = model.predict() &gt;= 0.5  # 예측값 (확률이 50% 이상일 때 1로 처리)\n\n# 혼동 행렬 초기화\nTP = TN = FP = FN = 0\n\n# 혼동 행렬 계산\nfor a, p in zip(actual, predicted):\n    if a == 1 and p == 1:\n        TP += 1\n    elif a == 0 and p == 0:\n        TN += 1\n    elif a == 0 and p == 1:\n        FP += 1\n    elif a == 1 and p == 0:\n        FN += 1\n\n# 결과 출력\nconf_matrix = np.array([[TN, FP], [FN, TP]]).reshape(2,2)\nprint(\"Confusion Matrix:\")\nprint(conf_matrix)\n\n[[15  3]\n [ 4  5]]\nConfusion Matrix:\n[[15  3]\n [ 4  5]]"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-9.-해당-모델의-accuracy는-얼마인가요",
+    "href": "posts/hw8/logisitc.html#문제-9.-해당-모델의-accuracy는-얼마인가요",
+    "title": "Homework8",
+    "section": "",
+    "text": "from sklearn.metrics import confusion_matrix, accuracy_score, f1_score\naccuracy1 = accuracy_score(df['REMISS'], df['predicted'])\naccuracy2 = (conf_matrix[0, 0] + conf_matrix[1, 1]) / conf_matrix.sum()\nprint(accuracy1)\nprint(accuracy2)\n\n0.7407407407407407\n0.7407407407407407"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-10.-해당-모델의-f1-score를-구하세요.",
+    "href": "posts/hw8/logisitc.html#문제-10.-해당-모델의-f1-score를-구하세요.",
+    "title": "Homework8",
+    "section": "",
+    "text": "f1 = f1_score(df['REMISS'], df['predicted'])\nprint(f1)\n\n0.5882352941176471"
   }
 ]
